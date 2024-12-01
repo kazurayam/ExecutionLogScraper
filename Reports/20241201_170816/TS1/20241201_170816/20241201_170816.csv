@@ -1,0 +1,16 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS1,Chrome 131.0.0.0,,,2024-12-01 17:08:22,2024-12-01 17:08:50,28.188s,FAILED
+,,,,,,,
+Test Cases/TC1,Chrome 131.0.0.0,,,2024-12-01 17:08:22,2024-12-01 17:08:50,27.882s,FAILED
+"openBrowser(""http://demoaut-mimic.kazurayam.com/"")",Chrome 131.0.0.0,,,2024-12-01 17:08:23,2024-12-01 17:08:31,7.992s,PASSED
+"validButton = makeTestObject(""Make Appointment button"", ""//a[@id='btn-make-appointment']"")",Chrome 131.0.0.0,,,2024-12-01 17:08:31,2024-12-01 17:08:31,0.017s,PASSED
+tObj = new com.kms.katalon.core.testobject.TestObject(id),Chrome 131.0.0.0,,,2024-12-01 17:08:31,2024-12-01 17:08:31,0.026s,PASSED
+"tObj.addProperty(""xpath"", EQUALS, xpath)",Chrome 131.0.0.0,,,2024-12-01 17:08:31,2024-12-01 17:08:31,0.053s,PASSED
+return tObj,Chrome 131.0.0.0,,,2024-12-01 17:08:31,2024-12-01 17:08:31,0.009s,PASSED
+"verifyElementPresent(validButton, 3, OPTIONAL)",Chrome 131.0.0.0,,,2024-12-01 17:08:31,2024-12-01 17:08:31,0.330s,PASSED
+delay(1),Chrome 131.0.0.0,,,2024-12-01 17:08:31,2024-12-01 17:08:32,1.042s,PASSED
+"verifyElementNotPresent(validButton, 3, OPTIONAL)",Chrome 131.0.0.0,,,2024-12-01 17:08:32,2024-12-01 17:08:37,4.834s,PASSED
+delay(1),Chrome 131.0.0.0,,,2024-12-01 17:08:37,2024-12-01 17:08:38,1.034s,PASSED
+"verifyElementNotPresent(validButton, 3, CONTINUE_ON_FAILURE)",Chrome 131.0.0.0,,,2024-12-01 17:08:38,2024-12-01 17:08:43,4.483s,FAILED
+delay(1),Chrome 131.0.0.0,,,2024-12-01 17:08:43,2024-12-01 17:08:44,1.008s,PASSED
+"verifyElementNotPresent(validButton, 3, STOP_ON_FAILURE)",Chrome 131.0.0.0,,,2024-12-01 17:08:44,2024-12-01 17:08:50,5.876s,FAILED
