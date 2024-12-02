@@ -3,21 +3,21 @@ package com.kazurayam.ksbackyard
 import java.nio.file.Files
 import java.nio.file.Path
 
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.DocumentBuilder
+import javax.xml.parsers.DocumentBuilderFactory
+import javax.xml.xpath.XPath
+import javax.xml.xpath.XPathConstants
+import javax.xml.xpath.XPathExpression
+import javax.xml.xpath.XPathExpressionException
+import javax.xml.xpath.XPathFactory
 
-import org.w3c.dom.Document;
+import org.w3c.dom.Document
 import org.w3c.dom.NodeList
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathFactory;
 
 
 public class ExecutionLogScraper {
 
-	private Document xmlDocument;
+	private Document xmlDocument
 
 	public ExecutionLogScraper(File executionlog) {
 		this(executionlog.toPath())
@@ -31,13 +31,17 @@ public class ExecutionLogScraper {
 	}
 
 	public NodeList findRecordWithAttachement(String attachement) {
-		return applyXPath("/log/record[property[contains(@name='attachement']/text(),'${attachement})']")
+		return applyXPath("/log/record[property[@name='attachment' and contains(text(),'${attachement}')]]")
 	}
 
 	public NodeList applyXPath(String expression) {
 		XPath xPath = XPathFactory.newInstance().newXPath()
-		NodeList nodeList =
-				(NodeList)xPath.compile(expression).evaluate(xmlDocument, XPathConstants.NODESET)
-		return nodeList
+		XPathExpression expr
+		try {
+			expr = xPath.compile(expression)
+		} catch (XPathExpressionException e) {
+			throw new IllegalArgumentException("invalid XPath: ${expression}", e)
+		}
+		return expr.evaluate(xmlDocument, XPathConstants.NODESET)
 	}
 }
