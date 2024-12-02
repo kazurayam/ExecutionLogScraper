@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>ExecutionLogScraperTestRunner</name>
+   <name>KSExecution0LogProcessorTestRunner</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>e73b6221-e08c-4f79-aa75-106592f539a1</testCaseGuid>

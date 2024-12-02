@@ -15,15 +15,15 @@ import org.w3c.dom.Document
 import org.w3c.dom.NodeList
 
 
-public class ExecutionLogScraper {
+public class KSExecution0LogProcessor {
 
 	private Document xmlDocument
 
-	public ExecutionLogScraper(File executionlog) {
+	public KSExecution0LogProcessor(File executionlog) {
 		this(executionlog.toPath())
 	}
 
-	public ExecutionLogScraper(Path executionlog) throws IOException {
+	public KSExecution0LogProcessor(Path executionlog) throws IOException {
 		InputStream is = Files.newInputStream(executionlog)
 		DocumentBuilderFactory dbFactory = XMLUtils.newSecureDocumentBuilderFactory()
 		DocumentBuilder builder = dbFactory.newDocumentBuilder()

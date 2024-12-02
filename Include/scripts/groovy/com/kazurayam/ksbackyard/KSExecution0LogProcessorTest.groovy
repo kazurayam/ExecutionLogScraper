@@ -14,7 +14,7 @@ import junittutorial.Calculator
 import org.w3c.dom.NodeList
 
 @RunWith(JUnit4.class)
-class ExecutionLogScraperTest {
+class KSExecution0LogProcessorTest {
 
 	private static Path executionLog
 
@@ -28,7 +28,7 @@ class ExecutionLogScraperTest {
 	@Test
 	void testSmoke() {
 		String pngFileName = "1733040516240.png"
-		ExecutionLogScraper scraper = new ExecutionLogScraper(executionLog)
+		KSExecution0LogProcessor scraper = new KSExecution0LogProcessor(executionLog)
 		NodeList recordElement = scraper.findRecordWithAttachement(pngFileName)
 		String s = XMLUtils.nodeListToString(recordElement)
 		println s
