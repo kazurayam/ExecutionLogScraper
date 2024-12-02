@@ -24,12 +24,11 @@ class KSExecution0LogProcessorTest {
 		executionLog = projectDir.resolve("Reports/20241201_170816/TS1/20241201_170816/execution0.log")
 	}
 
-
 	@Test
-	void testSmoke() {
+	void test_findRecordsWithAttachment() {
 		String pngFileName = "1733040516240.png"
 		KSExecution0LogProcessor scraper = new KSExecution0LogProcessor(executionLog)
-		NodeList recordElement = scraper.findRecordWithAttachement(pngFileName)
+		NodeList recordElement = scraper.findRecordsWithAttachment(pngFileName)
 		String s = XMLUtils.nodeListToString(recordElement)
 		println s
 	}

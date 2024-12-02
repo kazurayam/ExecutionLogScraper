@@ -1,0 +1,1 @@
+println GroovySystem.version   // shows "3.0.17" in Katalon Studio v9.0.0

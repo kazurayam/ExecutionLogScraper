@@ -1,5 +1,5 @@
 import static com.kazurayam.junit4ks.JUnitCustomKeywords.runWithJUnitRunner
 
-import com.kazurayam.ksbackyard.ExecutionLogScraperTest
+import com.kazurayam.ksbackyard.KSExecution0LogProcessorTest
 
-runWithJUnitRunner(ExecutionLogScraperTest.class)
+runWithJUnitRunner(KSExecution0LogProcessorTest.class)

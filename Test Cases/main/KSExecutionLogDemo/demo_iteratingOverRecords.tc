@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>lookupARecordWithAttachment</name>
+   <name>demo_iteratingOverRecords</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>263032ed-fe09-491b-a9ad-8af02e632453</testCaseGuid>
+   <testCaseGuid>01b58ad1-4246-48e3-b368-626f2b0eca76</testCaseGuid>
 </TestCaseEntity>

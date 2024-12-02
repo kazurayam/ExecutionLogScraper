@@ -30,7 +30,7 @@ public class KSExecution0LogProcessor {
 		this.xmlDocument = builder.parse(is)
 	}
 
-	public NodeList findRecordWithAttachement(String attachement) {
+	public NodeList findRecordsWithAttachment(String attachement) {
 		return applyXPath("/log/record[property[@name='attachment' and contains(text(),'${attachement}')]]")
 	}
 
